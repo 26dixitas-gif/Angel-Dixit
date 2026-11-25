@@ -1,0 +1,933 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CarePlus Hospital - Complete Healthcare</title>
+
+    <style>
+
+        /* GENERAL CSS */
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f2f7f8;
+            color: #263b46;
+        }
+
+        h1, h2, h3 {
+            font-family: Arial;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #103b4a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin: 10px;
+            animation: heading 3s;
+        }
+
+        header p {
+            color: #bce9df;
+            font-size: 17px;
+        }
+
+        @keyframes heading {
+            from {
+                color: #18b7a0;
+            }
+            to {
+                color: white;
+            }
+        }
+
+        /* NAVIGATION */
+        nav {
+            background-color: #087e83;
+            text-align: center;
+            padding: 17px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffe6a7;
+        }
+
+        /* HOME SECTION */
+        .home {
+            background-color: #d9f1ed;
+            padding: 55px 25px;
+            text-align: center;
+        }
+
+        .home h2 {
+            font-size: 36px;
+            color: #103b4a;
+        }
+
+        .home p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .home img {
+            width: 80%;
+            max-width: 750px;
+            height: 300px;
+            border: 5px solid white;
+        }
+
+        /* COMMON SECTION */
+        section {
+            padding: 35px 20px;
+            margin: 15px;
+            text-align: center;
+        }
+
+        .heading {
+            color: #087e83;
+            font-size: 30px;
+        }
+
+        .description {
+            color: #647983;
+            font-size: 16px;
+        }
+
+        /* HIGHLIGHTS */
+        .highlight {
+            display: inline-block;
+            background-color: #103b4a;
+            color: white;
+            width: 200px;
+            padding: 20px;
+            margin: 12px;
+            border-radius: 10px;
+        }
+
+        .highlight h2 {
+            color: #70dfc8;
+            font-size: 28px;
+        }
+
+        /* ABOUT */
+        .about {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .about p {
+            line-height: 1.8;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        /* SERVICE CARDS */
+        .service {
+            display: inline-block;
+            background-color: white;
+            width: 230px;
+            padding: 20px;
+            margin: 12px;
+            border: 1px solid #d5e7e7;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px #d4e2e5;
+            vertical-align: top;
+        }
+
+        .service img {
+            width: 100%;
+            height: 140px;
+        }
+
+        .service h3 {
+            color: #087e83;
+        }
+
+        .service p {
+            line-height: 1.6;
+        }
+
+        /* DOCTOR SECTION */
+        .doctor {
+            display: inline-block;
+            background-color: white;
+            width: 220px;
+            padding: 20px;
+            margin: 12px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px #d4e2e5;
+            vertical-align: top;
+        }
+
+        .doctor img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #bce9df;
+        }
+
+        .doctor h3 {
+            color: #103b4a;
+        }
+
+        .doctor p {
+            color: #087e83;
+        }
+
+        /* TABLES */
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: #103b4a;
+            color: white;
+            padding: 15px;
+        }
+
+        td {
+            padding: 13px;
+            border: 1px solid #cbdcde;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e4f3f1;
+        }
+
+        caption {
+            font-size: 22px;
+            color: #087e83;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        /* HEALTH TIPS */
+        .tip {
+            display: inline-block;
+            background-color: white;
+            width: 260px;
+            padding: 20px;
+            margin: 12px;
+            border-left: 5px solid #087e83;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .tip h3 {
+            color: #087e83;
+        }
+
+        /* APPOINTMENT FORM */
+        .appointment {
+            background-color: #d9f1ed;
+            padding: 35px;
+        }
+
+        .form-box {
+            background-color: white;
+            max-width: 650px;
+            margin: auto;
+            padding: 30px;
+            text-align: left;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px #c4dada;
+        }
+
+        label {
+            font-weight: bold;
+            color: #103b4a;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 18px;
+            border: 1px solid #b9d0d2;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #087e83;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            width: 48%;
+        }
+
+        input[type="reset"] {
+            background-color: #103b4a;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #065e63;
+        }
+
+        /* MEDIA SECTION */
+        .media-box {
+            display: inline-block;
+            background-color: white;
+            width: 40%;
+            padding: 20px;
+            margin: 12px;
+            border-radius: 10px;
+            vertical-align: top;
+        }
+
+        audio, video {
+            width: 100%;
+        }
+
+        /* MAP */
+        iframe {
+            width: 85%;
+            height: 300px;
+            border: 4px solid #087e83;
+        }
+
+        /* CONTACT */
+        .contact {
+            background-color: #103b4a;
+            color: white;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #70dfc8;
+        }
+
+        .contact p {
+            line-height: 1.8;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #092b37;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>✚ CAREPLUS HOSPITAL</h1>
+        <p>Your Health, Our Responsibility</p>
+        <p>Advanced Healthcare | Experienced Doctors | 24/7 Emergency</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#appointment">Appointment</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <!-- HOME -->
+        <section class="home" id="home">
+
+            <h2>We Care For Your Health</h2>
+
+            <p>
+                Welcome to CarePlus Hospital, where modern medical
+                technology meets compassionate healthcare.
+            </p>
+
+            <p>
+                Our mission is to provide quality treatment,
+                professional medical guidance and a comfortable
+                healthcare experience for every patient.
+            </p>
+
+            <img
+                src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1000"
+                alt="Hospital Building">
+
+            <p><b>Quality Healthcare. Trusted Doctors. Better Tomorrow.</b></p>
+
+        </section>
+
+        <!-- HOSPITAL HIGHLIGHTS -->
+        <section>
+
+            <h2 class="heading">CarePlus At A Glance</h2>
+
+            <div class="highlight">
+                <h2>25+</h2>
+                <p>Expert Doctors</p>
+            </div>
+
+            <div class="highlight">
+                <h2>10+</h2>
+                <p>Medical Departments</p>
+            </div>
+
+            <div class="highlight">
+                <h2>24/7</h2>
+                <p>Emergency Services</p>
+            </div>
+
+            <div class="highlight">
+                <h2>5000+</h2>
+                <p>Happy Patients</p>
+            </div>
+
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+
+            <h2 class="heading">About Our Hospital</h2>
+
+            <p>
+                CarePlus Hospital is a modern healthcare centre
+                committed to delivering reliable and affordable
+                medical services. We believe that every patient
+                deserves attention, respect and quality treatment.
+            </p>
+
+            <p>
+                Our hospital focuses on preventive healthcare,
+                accurate diagnosis, professional consultation
+                and patient satisfaction.
+            </p>
+
+            <h3>Our Mission</h3>
+            <p>To make quality healthcare accessible to everyone.</p>
+
+            <h3>Our Vision</h3>
+            <p>To become a trusted name in modern healthcare.</p>
+
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services">
+
+            <h2 class="heading">Our Medical Departments</h2>
+
+            <p class="description">
+                We provide specialized medical services for different
+                healthcare needs.
+            </p>
+
+            <article class="service">
+
+                <img src="https://images.unsplash.com/photo-1628348070889-cb656235b4eb?w=500"
+                     alt="Cardiology">
+
+                <h3>Cardiology</h3>
+
+                <p>
+                    Diagnosis and treatment related to heart health
+                    and cardiovascular conditions.
+                </p>
+
+            </article>
+
+            <article class="service">
+
+                <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500"
+                     alt="Neurology">
+
+                <h3>Neurology</h3>
+
+                <p>
+                    Medical care for brain, nerves and nervous
+                    system related conditions.
+                </p>
+
+            </article>
+
+            <article class="service">
+
+                <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=500"
+                     alt="Orthopedics">
+
+                <h3>Orthopedics</h3>
+
+                <p>
+                    Treatment and consultation for bones,
+                    joints and muscle-related problems.
+                </p>
+
+            </article>
+
+            <article class="service">
+
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500"
+                     alt="General Medicine">
+
+                <h3>General Medicine</h3>
+
+                <p>
+                    General health checkups, diagnosis,
+                    consultation and preventive care.
+                </p>
+
+            </article>
+
+            <article class="service">
+
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500"
+                     alt="Pediatrics">
+
+                <h3>Pediatrics</h3>
+
+                <p>
+                    Healthcare services and medical attention
+                    for infants and children.
+                </p>
+
+            </article>
+
+            <article class="service">
+
+                <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=500"
+                     alt="Emergency Care">
+
+                <h3>Emergency Care</h3>
+
+                <p>
+                    Immediate medical attention for urgent
+                    healthcare situations.
+                </p>
+
+            </article>
+
+        </section>
+
+        <!-- DOCTORS -->
+        <section id="doctors" style="background-color:#e5f2f1;">
+
+            <h2 class="heading">Meet Our Expert Doctors</h2>
+
+            <article class="doctor">
+
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400"
+                     alt="Doctor Rahul">
+
+                <h3>Dr. Rahul Sharma</h3>
+                <p>Cardiologist</p>
+                <p><b>Experience:</b> 12 Years</p>
+
+            </article>
+
+            <article class="doctor">
+
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400"
+                     alt="Doctor Priya">
+
+                <h3>Dr. Priya Mehta</h3>
+                <p>Neurologist</p>
+                <p><b>Experience:</b> 9 Years</p>
+
+            </article>
+
+            <article class="doctor">
+
+                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400"
+                     alt="Doctor Arjun">
+
+                <h3>Dr. Arjun Patel</h3>
+                <p>Orthopedic Specialist</p>
+                <p><b>Experience:</b> 11 Years</p>
+
+            </article>
+
+            <article class="doctor">
+
+                <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400"
+                     alt="Doctor Sneha">
+
+                <h3>Dr. Sneha Desai</h3>
+                <p>Pediatrician</p>
+                <p><b>Experience:</b> 8 Years</p>
+
+            </article>
+
+        </section>
+
+        <!-- DOCTOR SCHEDULE TABLE -->
+        <section id="schedule">
+
+            <h2 class="heading">Doctor Consultation Schedule</h2>
+
+            <table border="1" cellpadding="10" cellspacing="0">
+
+                <caption>Weekly Doctor Timetable</caption>
+
+                <thead>
+                    <tr>
+                        <th>Doctor Name</th>
+                        <th>Department</th>
+                        <th>Days</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Dr. Rahul Sharma</td>
+                        <td>Cardiology</td>
+                        <td>Monday - Friday</td>
+                        <td>9 AM - 1 PM</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dr. Priya Mehta</td>
+                        <td>Neurology</td>
+                        <td>Monday - Saturday</td>
+                        <td>10 AM - 2 PM</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dr. Arjun Patel</td>
+                        <td>Orthopedics</td>
+                        <td>Tuesday - Saturday</td>
+                        <td>2 PM - 6 PM</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dr. Sneha Desai</td>
+                        <td>Pediatrics</td>
+                        <td>Monday - Friday</td>
+                        <td>11 AM - 3 PM</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3"><b>Emergency Department</b></td>
+                        <td><b>24 Hours</b></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- HEALTH TIPS -->
+        <section style="background-color:#e5f2f1;">
+
+            <h2 class="heading">Health & Wellness Corner</h2>
+
+            <article class="tip">
+                <h3>01. Healthy Diet</h3>
+                <p>
+                    Eat balanced meals containing fruits,
+                    vegetables, proteins and essential nutrients.
+                </p>
+            </article>
+
+            <article class="tip">
+                <h3>02. Regular Exercise</h3>
+                <p>
+                    Stay physically active and include regular
+                    exercise in your daily routine.
+                </p>
+            </article>
+
+            <article class="tip">
+                <h3>03. Proper Sleep</h3>
+                <p>
+                    Maintain a regular sleep schedule and
+                    give your body enough time to rest.
+                </p>
+            </article>
+
+            <article class="tip">
+                <h3>04. Regular Checkups</h3>
+                <p>
+                    Regular health checkups can help monitor
+                    your health and identify problems early.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- PATIENT APPOINTMENT FORM -->
+        <section class="appointment" id="appointment">
+
+            <h2 class="heading">Patient Appointment Registration</h2>
+
+            <p class="description">
+                Fill in the details below to request a consultation.
+            </p>
+
+            <div class="form-box">
+
+                <form>
+
+                    <h3>Personal Information</h3>
+
+                    <label>First Name</label>
+                    <input type="text" name="firstname"
+                           placeholder="Enter first name" required>
+
+                    <label>Last Name</label>
+                    <input type="text" name="lastname"
+                           placeholder="Enter last name" required>
+
+                    <label>Date of Birth</label>
+                    <input type="date" name="dob" required>
+
+                    <label>Email Address</label>
+                    <input type="email" name="email"
+                           placeholder="Enter email address" required>
+
+                    <label>Mobile Number</label>
+                    <input type="tel" name="mobile"
+                           placeholder="Enter mobile number" required>
+
+                    <label>Gender</label><br>
+
+                    <input type="radio" name="gender" value="Male">
+                    Male
+
+                    <input type="radio" name="gender" value="Female">
+                    Female
+
+                    <input type="radio" name="gender" value="Other">
+                    Other
+
+                    <br><br>
+
+                    <h3>Appointment Details</h3>
+
+                    <label>Select Department</label>
+
+                    <select name="department" required>
+                        <option value="">Select Department</option>
+                        <option>Cardiology</option>
+                        <option>Neurology</option>
+                        <option>Orthopedics</option>
+                        <option>General Medicine</option>
+                        <option>Pediatrics</option>
+                    </select>
+
+                    <label>Select Doctor</label>
+
+                    <select name="doctor">
+                        <option>Dr. Rahul Sharma</option>
+                        <option>Dr. Priya Mehta</option>
+                        <option>Dr. Arjun Patel</option>
+                        <option>Dr. Sneha Desai</option>
+                    </select>
+
+                    <label>Appointment Date</label>
+                    <input type="date" name="appointmentdate" required>
+
+                    <label>Preferred Time</label>
+                    <input type="time" name="time">
+
+                    <label>Upload Previous Medical Report</label>
+                    <input type="file" name="report">
+
+                    <label>Describe Your Health Concern</label>
+                    <textarea name="message" rows="5"
+                              placeholder="Write your message here"></textarea>
+
+                    <input type="hidden" name="formname"
+                           value="CarePlus Appointment">
+
+                    <input type="checkbox" name="terms" required>
+                    I accept the terms and conditions.
+
+                    <br><br>
+
+                    <input type="submit" value="Submit Appointment">
+
+                    <input type="reset" value="Reset Form">
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- PATIENT INFORMATION TABLE -->
+        <section>
+
+            <h2 class="heading">Sample Patient Registration Record</h2>
+
+            <p class="description">
+                Example of how patient information can be organized
+                in an HTML table.
+            </p>
+
+            <table border="1" cellpadding="10" cellspacing="0">
+
+                <caption>Patient Details</caption>
+
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Patient Name</th>
+                    <th>Department</th>
+                    <th>Appointment Status</th>
+                </tr>
+
+                <tr>
+                    <td>CP101</td>
+                    <td>Aarav Sharma</td>
+                    <td>Cardiology</td>
+                    <td>Confirmed</td>
+                </tr>
+
+                <tr>
+                    <td>CP102</td>
+                    <td>Ananya Verma</td>
+                    <td>Neurology</td>
+                    <td>Pending</td>
+                </tr>
+
+                <tr>
+                    <td>CP103</td>
+                    <td>Rohan Patel</td>
+                    <td>Orthopedics</td>
+                    <td>Confirmed</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- HOSPITAL FACILITIES -->
+        <section style="background-color:#e5f2f1;">
+
+            <h2 class="heading">Our Hospital Facilities</h2>
+
+            <ul style="display:inline-block; text-align:left; line-height:2;">
+
+                <li>Modern Diagnostic Laboratory</li>
+                <li>Advanced Operation Theatres</li>
+                <li>24/7 Emergency Department</li>
+                <li>Pharmacy and Medical Store</li>
+                <li>Intensive Care Unit (ICU)</li>
+                <li>Ambulance Services</li>
+                <li>Patient Waiting Area</li>
+
+            </ul>
+
+        </section>
+
+        <!-- AUDIO AND VIDEO -->
+        <section>
+
+            <h2 class="heading">Hospital Information Centre</h2>
+
+            <article class="media-box">
+
+                <h3>Hospital Audio Introduction</h3>
+
+                <p>Listen to our hospital introduction.</p>
+
+                <audio controls>
+                    <source src="hospital-audio.mp3" type="audio/mpeg">
+                    Your browser does not support audio.
+                </audio>
+
+            </article>
+
+            <article class="media-box">
+
+                <h3>Hospital Video</h3>
+
+                <p>Watch our hospital introduction video.</p>
+
+                <video controls>
+                    <source src="hospital-video.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+
+            </article>
+
+        </section>
+
+        <!-- LOCATION MAP -->
+        <section>
+
+            <h2 class="heading">Find Our Hospital</h2>
+
+            <p class="description">
+                Visit CarePlus Hospital, Nashik, Maharashtra.
+            </p>
+
+            <iframe
+                src="https://www.google.com/maps?q=Nashik%20Maharashtra&output=embed">
+            </iframe>
+
+        </section>
+
+    </main>
+
+    <!-- CONTACT -->
+    <div class="contact" id="contact">
+
+        <h2>Contact CarePlus Hospital</h2>
+
+        <p><b>Address:</b> Nashik, Maharashtra, India</p>
+
+        <p><b>Phone:</b> +91 98765 43210</p>
+
+        <p><b>Email:</b> careplus@example.com</p>
+
+        <p><b>Emergency:</b> Open 24 Hours</p>
+
+        <h3>Our Working Hours</h3>
+
+        <p>Monday - Saturday: 9 AM - 8 PM</p>
+
+        <p>Sunday: 10 AM - 2 PM</p>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>✚ CAREPLUS HOSPITAL</h3>
+
+        <p>Your Health, Our Responsibility.</p>
+
+        <p>© 2026 CarePlus Hospital. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>
+ 
